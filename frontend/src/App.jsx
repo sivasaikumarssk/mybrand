@@ -7,10 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <h1>Brand-and-Beyondit</h1>
-        
-      </div>
+      <h1>Brand-and-Beyondit</h1>
     </div>
   )
 }
