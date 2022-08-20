@@ -1,25 +1,38 @@
 const express = require("express");
+
+const User = require("../models/user.model");
+
 const router = express.Router();
 
-const User = require("../models/user.models");
 
-router.post("",async(req,res)=>{
-    try{
-        const user = await User.create(req.body);
-        res.send(user);
-    }
-    catch(err){
+
+
+
+const Product = require("../models/user.model");
+
+
+
+
+router.post("", async (req, res) => {
+    try {
+
+        const product = await Product.create(req.body);
+        res.send(product)
+
+    } catch (err) {
         return res.status(400).send(err.message)
     }
 })
 
-router.get("",async(req,res)=>{
-    try{
-        const user = await User.find().lean().exec();
-        res.send(user);
-    }
-    catch(err){
-        return res.status(400).send(err.message);
+
+router.get("", async (req, res) => {
+    try {
+
+        const product = await Product.find().lean().exec();
+        res.send(product)
+
+    } catch (err) {
+        return res.status(400).send(err.message)
     }
 })
 
